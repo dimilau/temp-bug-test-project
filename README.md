@@ -2,6 +2,10 @@
 
 # Bug Reproduction Steps
 
+# DESCRIPTION
+This project demonstrates a bug in the handling of environment variables and secrets in a TanStack Start Minimal Project using Cloudflare Workers. The bug occurs when the "secrets" field is defined in "/wrangler.jsonc", causing the value of "MY_VARIABLE_A" to be overridden by the value in "/wrangler.jsonc" instead of using the value from ".dev.vars" during local development.
+
+
 ## SETUP
 1. Add "MY_VARIABLE_A" environment variable to "/wrangler.jsonc" with value "100900"
 2. Add "MY_VARIABLE_A" environment variable to ".dev.vars" with value "900"
